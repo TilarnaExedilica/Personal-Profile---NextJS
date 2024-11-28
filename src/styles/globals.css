@@ -3,20 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-}
+  /* Background colors */
+  --background-primary: #ffffff;
+  --background-secondary: #000000;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #000000;
-  }
+  /* Text colors */
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
+
+  /* Component specific colors */
+  --banner-overlay: rgba(0, 0, 0, 0.4);
+  --right-section-bg: #000000;
 }
 
 body {
   overflow: hidden !important;
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--text-primary);
+  background: var(--background-primary);
   font-family: var(--font-lexend-deca);
 }

@@ -31,7 +31,7 @@ export default function HomeContent() {
             duration: 2,
             ease: "easeInOut"
           }}
-          className="absolute inset-0 bg-black/40 backdrop-blur-sm" 
+          className="absolute inset-0 bg-[var(--banner-overlay)] backdrop-blur-sm" 
         />
       </motion.div>
 
@@ -76,7 +76,7 @@ export default function HomeContent() {
             damping: 20,
             delay: 0.6
           }}
-          className="w-1/2 p-8 pt-16 text-black"
+          className="w-1/2 p-8 pt-16 text-[var(--text-primary)]"
         >
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -106,7 +106,7 @@ export default function HomeContent() {
             scale: 1.02,
             transition: { duration: 0.3, ease: "easeOut" }
           }}
-          className="w-1/2 p-8 bg-black text-white rounded-tl-[32px]"
+          className="w-1/2 p-8 bg-[var(--right-section-bg)] text-[var(--text-secondary)] rounded-tl-[32px]"
         >
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
