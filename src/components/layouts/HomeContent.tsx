@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import backgroundImage from '@/assets/images/background_1.png';
 import avatarImage from '@/assets/images/ken.png';
+import LeftContent from '@/components/ui/LeftContent';
+import RightContent from '@/components/ui/RightContent';
 
 export default function HomeContent() {
   return (
@@ -56,7 +58,7 @@ export default function HomeContent() {
         transition={{
           duration: 0.8,
           delay: 1.2,
-          ease: [0.23, 1.64, 0.32, 1] // Custom spring effect
+          ease: [0.23, 1.64, 0.32, 1]
         }}
         whileHover={{ 
           scale: 1.1,
@@ -68,10 +70,8 @@ export default function HomeContent() {
         }}
         className="absolute left-[70px] top-[120px]"
       >
-        {/* Larger circle behind avatar without overlay */}
         <div className="absolute w-[140px] h-[140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 backdrop-blur-none" />
         
-        {/* Avatar image */}
         <div className="relative w-[120px] h-[120px] rounded-full overflow-hidden shadow-lg">
           <Image
             src={avatarImage}
@@ -84,44 +84,8 @@ export default function HomeContent() {
 
       {/* Content sections */}
       <div className="flex flex-1">
-        <motion.div 
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ 
-            duration: 0.8,
-            delay: 1.5,
-            ease: "easeOut"
-          }}
-          className="w-1/2 p-8 pt-16 text-[var(--text-primary)]"
-        >
-          <h2 className="text-2xl font-bold">
-            Left Content
-          </h2>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ 
-            duration: 0.8,
-            delay: 1.7,
-            ease: "easeOut"
-          }}
-          whileHover={{ 
-            scale: 1.02,
-            transition: { 
-              duration: 0.3,
-              ease: "easeOut"
-            }
-          }}
-          className="w-1/2 p-8 bg-[var(--right-section-bg)] text-[var(--text-secondary)] rounded-tl-[32px]"
-        >
-          <motion.h2 
-            className="text-2xl font-bold"
-          >
-            Right Content
-          </motion.h2>
-        </motion.div>
+        <LeftContent />
+        <RightContent />
       </div>
     </div>
   );
