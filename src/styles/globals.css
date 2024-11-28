@@ -15,6 +15,7 @@
 }
 
 body {
+  overflow: hidden !important;
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-lexend-deca);

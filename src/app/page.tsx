@@ -1,12 +1,13 @@
 'use client';
-import SplashScreen from '@/components/layouts/SplashScreen';
-import HomeContent from '@/components/layouts/HomeContent';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
-export default function Home() {
-  return (
-    <>
-      <SplashScreen />
-      <HomeContent />
-    </>
-  );
+export default function RootPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/splash');
+  }, [router]);
+
+  return null;
 }
