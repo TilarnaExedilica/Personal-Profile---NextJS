@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import { profileConfig } from '@/config/profile';
 
 export default function LeftContent() {
   const containerVariants = {
@@ -14,8 +15,8 @@ export default function LeftContent() {
       opacity: 1,
       y: 0,
       transition: {
-        delayChildren: 0.8, 
-        staggerChildren: 0.1 
+        delayChildren: 0.8,
+        staggerChildren: 0.1
       }
     }
   };
@@ -44,59 +45,49 @@ export default function LeftContent() {
         animate="visible"
       >
         <motion.h2 variants={itemVariants} className="text-3xl font-bold">
-          Tilarna
+          {profileConfig.name}
         </motion.h2>
         
         <div className="flex flex-wrap items-center gap-2 mt-1">
           <motion.p variants={itemVariants} className="text-base font-normal text-[var(--text-primary)] opacity-80">
-            @tilarnaexedilica
+            {profileConfig.codename}
           </motion.p>
           
-          <motion.button 
-            variants={itemVariants}
-            className="flex items-center gap-2 px-3 py-1 rounded-md bg-[var(--status-button-color)] bg-opacity-20 border border-[var(--status-button-border-color)] border-opacity-30 hover:bg-opacity-30 transition-colors"
-          >
-            <span className="text-sm text-[var(--text-secondary)] whitespace-nowrap">Full-time</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14" 
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-[var(--text-secondary)]"
+          {profileConfig.jobTags.map((tag, index) => (
+            <motion.button 
+              key={index}
+              variants={itemVariants}
+              style={{
+                backgroundColor: tag.colors.background,
+                borderColor: tag.borders.color,
+              }}
+              className="flex items-center gap-2 px-3 py-1 rounded-md border hover:bg-opacity-30 transition-colors"
             >
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-          </motion.button>
-
-          <motion.button 
-            variants={itemVariants}
-            className="flex items-center gap-2 px-3 py-1 rounded-md bg-[var(--role-button-color)] bg-opacity-20 border border-[var(--role-button-border-color)] border-opacity-30 hover:bg-opacity-30 transition-colors"
-          >
-            <span className="text-sm text-[var(--text-secondary)] whitespace-nowrap">Frontend Engineer</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-[var(--text-secondary)]"
-            >
-              <path d="M18 8L22 12L18 16" />
-              <path d="M6 8L2 12L6 16" />
-              <path d="M14.5 4L9.5 20" />
-            </svg>
-          </motion.button>
+              <span style={{ color: tag.colors.text }} className="text-sm whitespace-nowrap">
+                {tag.title}
+              </span>
+              {tag.icon && (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={tag.icon.size}
+                  height={tag.icon.size}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke={tag.colors.text}
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  {tag.icon.path && <path d={tag.icon.path} />}
+                  {tag.icon.paths?.map((path, i) => (
+                    <path key={i} d={path} />
+                  ))}
+                </svg>
+              )}
+            </motion.button>
+          ))}
         </div>
-        
+
         <motion.div variants={itemVariants}>
           {/* Widget 1 */}
         </motion.div>

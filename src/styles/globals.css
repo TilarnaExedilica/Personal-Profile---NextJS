@@ -20,12 +20,6 @@
   --line-color: #ffffff;
   --icon-color: rgba(255, 255, 255, 0.7);
   --icon-hover-color: #ffffff;
-
-  /* Code button colors */
-  --status-button-color: #1f3f7c;
-  --status-button-border-color: #0b254c;
-  --role-button-color: #0d503c;
-  --role-button-border-color: #16a34a;
 }
 
 body {
