@@ -5,6 +5,7 @@ import backgroundImage from '@/assets/images/background_01.jpg';
 import avatarImage from '@/assets/images/ken.png';
 import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default function HomeContent() {
   return (
@@ -49,6 +50,85 @@ export default function HomeContent() {
           }}
           className="absolute inset-0 bg-[var(--banner-overlay)] backdrop-blur-[8px]" 
         />
+
+        {/* Container cho line và icons */}
+        <div className="absolute top-[40px] w-full flex items-center">
+          {/* Line trái */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{
+              duration: 1.2,
+              delay: 1.5,
+              ease: [0.43, 0.13, 0.23, 0.96]
+            }}
+            className="h-[1px] bg-[var(--line-color)] flex-1 origin-right"
+          />
+
+          {/* Icons */}
+          <div className="px-8 flex items-center gap-4">
+            <motion.a 
+              href="https://github.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: 2.2,
+                ease: [0.43, 0.13, 0.23, 0.96]
+              }}
+              whileHover={{ scale: 1.2 }}
+              className="text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
+            >
+              <FaGithub size={18} />
+            </motion.a>
+            <motion.a 
+              href="https://linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: 2.3,
+                ease: [0.43, 0.13, 0.23, 0.96]
+              }}
+              whileHover={{ scale: 1.2 }}
+              className="text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
+            >
+              <FaLinkedin size={18} />
+            </motion.a>
+            <motion.a 
+              href="https://twitter.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: 2.4,
+                ease: [0.43, 0.13, 0.23, 0.96]
+              }}
+              whileHover={{ scale: 1.2 }}
+              className="text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
+            >
+              <FaTwitter size={18} />
+            </motion.a>
+          </div>
+
+          {/* Line phải */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{
+              duration: 1.2,
+              delay: 1.5,
+              ease: [0.43, 0.13, 0.23, 0.96]
+            }}
+            className="h-[1px] bg-[var(--line-color)] w-[30px] origin-left"
+          />
+        </div>
       </motion.div>
 
       {/* Avatar section */}

@@ -15,6 +15,11 @@
   --banner-overlay: rgba(0, 0, 0, 0.1);
   --right-section-bg: #000000;
   --avatar-backdrop: rgba(255, 255, 255, 0.2);
+
+  /* Line & Icon colors */
+  --line-color: #ffffff;
+  --icon-color: rgba(255, 255, 255, 0.7);
+  --icon-hover-color: #ffffff;
 }
 
 body {
