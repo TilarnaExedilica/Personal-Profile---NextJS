@@ -5,7 +5,7 @@ import backgroundImage from '@/assets/images/background_01.jpg';
 import avatarImage from '@/assets/images/ken.png';
 import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
-import { FaGithub, FaLinkedin, FaTwitter, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaChevronRight } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function HomeContent() {
@@ -136,7 +136,14 @@ export default function HomeContent() {
 
       {/* Avatar section */}
       <motion.div 
-        className="absolute left-[70px] top-[120px] flex items-center"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 1.8,
+          ease: [0.43, 0.13, 0.23, 0.96]
+        }}
+        className="absolute left-[70px] top-[120px] flex items-center z-50"
       >
         <div className="relative">
           <div className="absolute w-[140px] h-[140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--avatar-backdrop)] backdrop-blur-none" />
@@ -156,22 +163,50 @@ export default function HomeContent() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
+          whileTap={{ scale: 0.9 }}
           onClick={() => setShowRightContent(!showRightContent)}
           className="ml-4 p-2 rounded-full bg-[var(--icon-color)] hover:bg-[var(--icon-hover-color)] transition-colors md:hidden"
         >
-          {showRightContent ? <FaChevronLeft size={16} /> : <FaChevronRight size={16} />}
+          <motion.div
+            initial={false}
+            animate={{ rotate: showRightContent ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <FaChevronRight size={16} />
+          </motion.div>
         </motion.button>
       </motion.div>
 
       {/* Content sections */}
-      <div className="flex flex-1 h-[calc(100vh-200px)]">
-        <div className={`h-[calc(100vh-200px)] transition-all duration-300 ${showRightContent ? 'hidden md:block md:w-1/2' : 'w-full md:w-1/2'}`}>
+      <div className="flex flex-1 h-[calc(100vh-200px)] relative overflow-hidden">
+        <motion.div 
+          animate={{ 
+            width: showRightContent ? '0%' : '100%',
+            opacity: showRightContent ? 0 : 1
+          }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut"
+          }}
+          className={`h-[calc(100vh-200px)] md:!w-1/2 md:!opacity-100 ${showRightContent ? 'hidden md:block' : ''}`}
+        >
           <LeftContent />
-        </div>
-        <div className={`h-[calc(100vh-200px)] transition-all duration-300 ${!showRightContent ? 'hidden md:block md:w-1/2' : 'w-full md:w-1/2'}`}>
+        </motion.div>
+        <motion.div 
+          animate={{ 
+            width: !showRightContent ? '0%' : '100%',
+            opacity: !showRightContent ? 0 : 1
+          }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut"
+          }}
+          className={`h-[calc(100vh-200px)] md:!w-1/2 md:!opacity-100 ${!showRightContent ? 'hidden md:block' : ''}`}
+        >
           <RightContent />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 } 
+

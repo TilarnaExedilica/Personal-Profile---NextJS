@@ -34,3 +34,28 @@ body {
     overflow-y: auto !important;
   }
 }
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    position: relative;
+    overflow-y: auto;
+  }
+}
