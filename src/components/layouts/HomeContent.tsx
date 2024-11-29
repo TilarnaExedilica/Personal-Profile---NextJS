@@ -5,7 +5,7 @@ import backgroundImage from '@/assets/images/background_01.jpg';
 import avatarImage from '@/assets/images/ken.png';
 import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
-import { FaGithub, FaLinkedin, FaTwitter, FaChevronRight } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaChevronRight, FaEye } from 'react-icons/fa';
 import { useState } from 'react';
 
 export default function HomeContent() {
@@ -70,6 +70,20 @@ export default function HomeContent() {
 
           {/* Icons */}
           <div className="px-8 flex items-center gap-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: 2.1,
+                ease: [0.43, 0.13, 0.23, 0.96]
+              }}
+              className="flex items-center gap-2 text-[var(--icon-color)]"
+            >
+              <FaEye size={18} />
+              <span className="text-sm">899,215</span>
+            </motion.div>
+
             <motion.a 
               href="https://github.com" 
               target="_blank" 
