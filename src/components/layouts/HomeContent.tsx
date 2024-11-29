@@ -5,8 +5,9 @@ import backgroundImage from '@/assets/images/background_01.jpg';
 import avatarImage from '@/assets/images/ken.png';
 import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
-import { FaGithub, FaLinkedin, FaTwitter, FaChevronRight, FaEye } from 'react-icons/fa';
+import {  FaChevronRight, FaEye } from 'react-icons/fa';
 import { useState } from 'react';
+import { profileConfig } from '@/config/profile';
 
 export default function HomeContent() {
   const [showRightContent, setShowRightContent] = useState(false);
@@ -84,54 +85,35 @@ export default function HomeContent() {
               <span className="text-sm">899,215</span>
             </motion.div>
 
-            <motion.a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.3,
-                delay: 2.2,
-                ease: [0.43, 0.13, 0.23, 0.96]
-              }}
-              whileHover={{ scale: 1.2 }}
-              className="text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
-            >
-              <FaGithub size={18} />
-            </motion.a>
-            <motion.a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.3,
-                delay: 2.3,
-                ease: [0.43, 0.13, 0.23, 0.96]
-              }}
-              whileHover={{ scale: 1.2 }}
-              className="text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
-            >
-              <FaLinkedin size={18} />
-            </motion.a>
-            <motion.a 
-              href="https://twitter.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.3,
-                delay: 2.4,
-                ease: [0.43, 0.13, 0.23, 0.96]
-              }}
-              whileHover={{ scale: 1.2 }}
-              className="text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
-            >
-              <FaTwitter size={18} />
-            </motion.a>
+            {profileConfig.socialLinks.map((social, index) => (
+              <motion.a
+                key={social.platform}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  delay: 2.2 + (index * 0.1),
+                  ease: [0.43, 0.13, 0.23, 0.96]
+                }}
+                whileHover={{ scale: 1.2 }}
+                className="text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={social.icon.size}
+                  height={social.icon.size}
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  {social.icon.paths.map((path, i) => (
+                    <path key={i} d={path} />
+                  ))}
+                </svg>
+              </motion.a>
+            ))}
           </div>
 
           {/* Line phải */}
