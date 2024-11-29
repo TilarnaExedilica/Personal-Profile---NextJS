@@ -11,7 +11,7 @@ export default function LeftContent() {
         delay: 1.5,
         ease: "easeOut"
       }}
-      className="w-1/2 p-8 pt-16 text-[var(--text-primary)]"
+      className="w-full p-4 pt-16 md:p-8 md:pt-16 text-[var(--text-primary)]"
     >
       <h2 className="text-2xl font-bold">
         Left Content

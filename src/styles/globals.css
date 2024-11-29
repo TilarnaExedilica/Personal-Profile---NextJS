@@ -28,3 +28,9 @@ body {
   background: var(--background-primary);
   font-family: var(--font-lexend-deca);
 }
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto !important;
+  }
+}

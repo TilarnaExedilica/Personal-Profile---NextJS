@@ -11,14 +11,7 @@ export default function RightContent() {
         delay: 1.7,
         ease: "easeOut"
       }}
-      whileHover={{ 
-        scale: 1.02,
-        transition: { 
-          duration: 0.3,
-          ease: "easeOut"
-        }
-      }}
-      className="w-1/2 p-8 bg-[var(--right-section-bg)] text-[var(--text-secondary)] rounded-tl-[32px]"
+      className="h-[calc(100vh-200px)] w-full p-4 pt-16 md:p-8 bg-[var(--right-section-bg)] text-[var(--text-secondary)] md:rounded-tl-[32px] md:hover:scale-[1.02]"
     >
       <motion.h2 
         className="text-2xl font-bold"

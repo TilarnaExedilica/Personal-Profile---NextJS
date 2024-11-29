@@ -5,9 +5,12 @@ import backgroundImage from '@/assets/images/background_01.jpg';
 import avatarImage from '@/assets/images/ken.png';
 import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
+import { useState } from 'react';
 
 export default function HomeContent() {
+  const [showRightContent, setShowRightContent] = useState(false);
+
   return (
     <div className="relative flex flex-col min-h-screen">
       {/* Banner section */}
@@ -133,31 +136,41 @@ export default function HomeContent() {
 
       {/* Avatar section */}
       <motion.div 
-        initial={{ scale: 0, opacity: 0, y: 50 }}
-        animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.8,
-          delay: 1.2,
-          ease: [0.23, 1.64, 0.32, 1]
-        }}
-        className="absolute left-[70px] top-[120px]"
+        className="absolute left-[70px] top-[120px] flex items-center"
       >
-        <div className="absolute w-[140px] h-[140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--avatar-backdrop)] backdrop-blur-none" />
-        
-        <div className="relative w-[120px] h-[120px] rounded-full overflow-hidden shadow-lg">
-          <Image
-            src={avatarImage}
-            alt="Avatar"
-            fill
-            className="object-cover"
-          />
+        <div className="relative">
+          <div className="absolute w-[140px] h-[140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--avatar-backdrop)] backdrop-blur-none" />
+          
+          <div className="relative w-[120px] h-[120px] rounded-full overflow-hidden shadow-lg">
+            <Image
+              src={avatarImage}
+              alt="Avatar"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
+        
+        {/* Toggle button */}
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2 }}
+          onClick={() => setShowRightContent(!showRightContent)}
+          className="ml-4 p-2 rounded-full bg-[var(--icon-color)] hover:bg-[var(--icon-hover-color)] transition-colors md:hidden"
+        >
+          {showRightContent ? <FaChevronLeft size={16} /> : <FaChevronRight size={16} />}
+        </motion.button>
       </motion.div>
 
       {/* Content sections */}
-      <div className="flex flex-1">
-        <LeftContent />
-        <RightContent />
+      <div className="flex flex-1 h-[calc(100vh-200px)]">
+        <div className={`h-[calc(100vh-200px)] transition-all duration-300 ${showRightContent ? 'hidden md:block md:w-1/2' : 'w-full md:w-1/2'}`}>
+          <LeftContent />
+        </div>
+        <div className={`h-[calc(100vh-200px)] transition-all duration-300 ${!showRightContent ? 'hidden md:block md:w-1/2' : 'w-full md:w-1/2'}`}>
+          <RightContent />
+        </div>
       </div>
     </div>
   );
