@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import backgroundImage from '@/assets/images/background_1.png';
+import backgroundImage from '@/assets/images/background_01.jpg';
 import avatarImage from '@/assets/images/ken.png';
 import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
@@ -60,17 +60,9 @@ export default function HomeContent() {
           delay: 1.2,
           ease: [0.23, 1.64, 0.32, 1]
         }}
-        whileHover={{ 
-          scale: 1.1,
-          rotate: [0, -10, 10, -10, 0],
-          transition: { 
-            duration: 0.8,
-            ease: "easeInOut"
-          }
-        }}
         className="absolute left-[70px] top-[120px]"
       >
-        <div className="absolute w-[140px] h-[140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/30 backdrop-blur-none" />
+        <div className="absolute w-[140px] h-[140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--avatar-backdrop)] backdrop-blur-none" />
         
         <div className="relative w-[120px] h-[120px] rounded-full overflow-hidden shadow-lg">
           <Image

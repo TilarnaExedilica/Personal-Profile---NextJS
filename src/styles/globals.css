@@ -14,6 +14,7 @@
   /* Component specific colors */
   --banner-overlay: rgba(0, 0, 0, 0.1);
   --right-section-bg: #000000;
+  --avatar-backdrop: rgba(255, 255, 255, 0.2);
 }
 
 body {
