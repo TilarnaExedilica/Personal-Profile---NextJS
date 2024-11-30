@@ -1,17 +1,54 @@
 export const profileConfig = {
   name: "Tilarna",
   codename: "@tilarnaexedilica",
-  location: {
-    address: "Ho Chi Minh City, Vietnam",
-    mapUrl: "https://maps.google.com/?q=Ho+Chi+Minh+City",
-    icon: {
-      paths: [
-        "M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z",
-        "M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
-      ],
-      size: 16
+  contactInfo: [
+    {
+      type: "location",
+      value: "Ho Chi Minh City, Vietnam",
+      url: "https://maps.google.com/?q=Ho+Chi+Minh+City",
+      icon: {
+        paths: [
+          "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+        ],
+        size: 16
+      },
+      colors: {
+        icon: "#3b82f6", 
+        hover: "#60a5fa" 
+      }
+    },
+    {
+      type: "phone",
+      value: "+84 898 019 210",
+      url: "tel:+84123456789",
+      icon: {
+        paths: [
+          "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+        ],
+        size: 16
+      },
+      colors: {
+        icon: "#22c55e",
+        hover: "#4ade80" 
+      }
+    },
+    {
+      type: "email",
+      value: "tilarna@hotmail.com",
+      url: "mailto:tilarna@hotmail.com",
+      icon: {
+        paths: [
+          "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z",
+          "M22 6l-10 7L2 6"
+        ],
+        size: 16
+      },
+      colors: {
+        icon: "#a855f7", 
+        hover: "#c084fc"
+      }
     }
-  },
+  ],
   socialLinks: [
     {
       platform: "github",
@@ -45,6 +82,41 @@ export const profileConfig = {
     }
   ],
   jobTags: [
+   //Not Available For Work version (commented)
+/*
+    {
+    title: "Not Available For Work",
+    icon: {
+      paths: [
+        "M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+      ],
+      size: 14
+    },
+    colors: {
+      background: "#991b1b",
+      text: "#ffffff"
+    },
+    borders: {
+      color: "#7f1d1d"
+    }
+   }, 
+*/
+   {
+    title: "Available For Work",
+    icon: {
+      paths: [
+        "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+      ],
+      size: 14
+    },
+    colors: {
+      background: "#15803d",
+      text: "#ffffff"
+    },
+    borders: {
+      color: "#14532d"
+    }
+    },
     {
       title: "Full-time",
       icon: {
@@ -70,11 +142,11 @@ export const profileConfig = {
         size: 14
       },
       colors: {
-        background: "#0d503c",
+        background: "#06b6d4",
         text: "#ffffff"
       },
       borders: {
-        color: "#16a34a"
+        color: "#0891b2"
       }
     }
   ]

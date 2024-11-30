@@ -37,7 +37,7 @@ export default function LeftContent() {
         delay: 1.5,
         ease: "easeOut"
       }}
-      className="w-full p-4 pt-16 md:p-8 md:pt-16 pl-8 md:pl-12 lg:pl-16 text-[var(--text-primary)] relative z-10"
+      className="w-full h-[calc(100vh-200px)] overflow-y-auto scrollbar-hide p-4 pt-16 md:p-8 md:pt-16 pl-8 md:pl-12 lg:pl-16 text-[var(--text-primary)] relative z-10"
     >
       <motion.div
         variants={childrenVariants}
@@ -88,45 +88,6 @@ export default function LeftContent() {
           ))}
         </div>
 
-        <motion.a 
-          href={profileConfig.location.mapUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          variants={itemVariants}
-          className="inline-flex items-center gap-1 mt-2 text-[var(--text-primary)] opacity-80 hover:opacity-100 group relative"
-          whileHover={{
-            scale: 1.02,
-            transition: { duration: 0.2 }
-          }}
-        >
-          <div className="relative">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={profileConfig.location.icon.size}
-              height={profileConfig.location.icon.size}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="group-hover:text-blue-500 transition-all duration-300 group-hover:rotate-[12deg] transform group-hover:scale-110 relative z-10"
-            >
-              {profileConfig.location.icon.paths.map((path, i) => (
-                <path key={i} d={path} />
-              ))}
-            </svg>
-            <span className="absolute inset-0 bg-blue-500/20 rounded-full blur-md scale-0 group-hover:scale-100 transition-transform duration-300" />
-          </div>
-          <span className="relative overflow-hidden group-hover:tracking-wide transition-all duration-300">
-            {profileConfig.location.address}
-            <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"/>
-            <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 -z-10"/>
-            <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent group-hover:translate-x-full transition-transform duration-1000 skew-x-12"/>
-          </span>
-          <span className="absolute -inset-x-4 -inset-y-2 bg-gradient-to-r from-blue-500/0 via-purple-500/5 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-lg -z-10"/>
-        </motion.a>
-
         <motion.div variants={itemVariants}>
           {/* Widget 1 */}
         </motion.div>
@@ -138,6 +99,58 @@ export default function LeftContent() {
         <motion.div variants={itemVariants}>
           {/* Widget 3 */}
         </motion.div>
+
+        <div className="flex flex-wrap items-center gap-2 mt-2">
+          {profileConfig.contactInfo.map((contact, index) => (
+            <motion.a 
+              key={index}
+              href={contact.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              className="inline-flex items-center gap-1 text-[var(--text-primary)] opacity-80 hover:opacity-100 group relative"
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.3, type: "spring", stiffness: 300 }
+              }}
+            >
+              <div className="relative">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={contact.icon.size}
+                  height={contact.icon.size}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className={`transition-all duration-300 group-hover:rotate-[360deg] transform group-hover:scale-110 relative z-10`}
+                  style={{
+                    color: contact.colors.icon,
+                    '--hover-color': contact.colors.hover
+                  } as React.CSSProperties}
+                >
+                  {contact.icon.paths.map((path, i) => (
+                    <path key={i} d={path} />
+                  ))}
+                </svg>
+                <span className="absolute inset-0 rounded-full blur-md scale-0 group-hover:scale-150 transition-transform duration-500"
+                  style={{ backgroundColor: `${contact.colors.icon}33` }} />
+              </div>
+              <span className="relative overflow-hidden group-hover:tracking-wider transition-all duration-300">
+                {contact.value}
+                <span className="absolute left-0 bottom-0 w-full h-[2px] transform origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+                  style={{ background: `linear-gradient(to right, ${contact.colors.icon}, ${contact.colors.hover})` }}/>
+                <span className="absolute inset-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 -z-10"
+                  style={{ background: `linear-gradient(to right, ${contact.colors.icon}1a, ${contact.colors.hover}1a)` }}/>
+                <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent group-hover:translate-x-full transition-transform duration-1000 skew-x-12"/>
+              </span>
+              <span className="absolute -inset-x-4 -inset-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl rounded-lg -z-10"
+                style={{ background: `linear-gradient(to right, ${contact.colors.icon}00, ${contact.colors.hover}0d)` }}/>
+            </motion.a>
+          ))}
+        </div>
       </motion.div>
     </motion.div>
   );
