@@ -1,6 +1,17 @@
 export const profileConfig = {
   name: "Tilarna",
   codename: "@tilarnaexedilica",
+  location: {
+    address: "Ho Chi Minh City, Vietnam",
+    mapUrl: "https://maps.google.com/?q=Ho+Chi+Minh+City",
+    icon: {
+      paths: [
+        "M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z",
+        "M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+      ],
+      size: 16
+    }
+  },
   socialLinks: [
     {
       platform: "github",

@@ -7,7 +7,7 @@ import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
 import {  FaChevronRight, FaEye } from 'react-icons/fa';
 import { useState } from 'react';
-import { profileConfig } from '@/config/profile';
+import { profileConfig } from '@/config/info';
 
 export default function HomeContent() {
   const [showRightContent, setShowRightContent] = useState(false);
