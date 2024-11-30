@@ -88,18 +88,6 @@ export default function LeftContent() {
           ))}
         </div>
 
-        <motion.div variants={itemVariants}>
-          {/* Widget 1 */}
-        </motion.div>
-
-        <motion.div variants={itemVariants}>
-          {/* Widget 2 */}
-        </motion.div>
-
-        <motion.div variants={itemVariants}>
-          {/* Widget 3 */}
-        </motion.div>
-
         <div className="flex flex-wrap items-center gap-2 mt-2">
           {profileConfig.contactInfo.map((contact, index) => (
             <motion.a 
@@ -151,6 +139,33 @@ export default function LeftContent() {
             </motion.a>
           ))}
         </div>
+
+        {profileConfig.introduction.map((intro, index) => (
+          <motion.div 
+            key={index}
+            variants={itemVariants}
+            className={`mt-8 pl-4 border-l-2 border-[var(--text-primary)] border-opacity-20`}
+          >
+            <h1 className="text-base md:text-lg font-medium text-[var(--text-primary)]">
+              {intro.title}
+            </h1>
+            <p className="text-sm md:text-base text-[var(--text-primary)] opacity-80 leading-relaxed">
+              {intro.description}
+            </p>
+          </motion.div>
+        ))}
+
+        <motion.div variants={itemVariants}>
+          {/* Widget 1 */}
+        </motion.div>
+
+        <motion.div variants={itemVariants}>
+          {/* Widget 2 */}
+        </motion.div>
+
+        <motion.div variants={itemVariants}>
+          {/* Widget 3 */}
+        </motion.div>
       </motion.div>
     </motion.div>
   );

@@ -1,6 +1,23 @@
 export const profileConfig = {
   name: "Tilarna",
   codename: "@tilarnaexedilica",
+  introduction: [
+    {
+      type: "greeting",
+      title: "Hello! I'm Tilarna (SangPham)",
+      description: "A passionate individual who embodies the harmonious blend of a programmer's logic and a designer's creativity. With a keen eye for aesthetics and a love for coding, I am on a perpetual journey to bridge the digital world with captivating visuals."
+    },
+    {
+      type: "experience",
+      title: "Experience",
+      description: "1 years of experience in frontend & mobile development..."
+    },
+    {
+      type: "skills",
+      title: "Core Skills",
+      description: "Specialized in Flutter, Vue, Nextjs, TypeScript, and UI/UX design..."
+    }
+  ],
   contactInfo: [
     {
       type: "location",
