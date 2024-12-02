@@ -25,6 +25,11 @@
   --accent-lime: #d6f27b;
   --accent-purple: #c5b5ff;
   --accent-pink: #fea7da;
+
+  --menu-bg: rgba(0, 0, 0, 0.2);
+  --menu-hover: rgba(0, 0, 0, 0.2);
+  --menu-text: rgb(209, 213, 219);
+  --menu-indicator: rgba(107, 114, 128, 0.5);
 }
 
 body {
