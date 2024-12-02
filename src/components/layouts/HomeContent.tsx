@@ -9,6 +9,17 @@ import {  FaChevronRight, FaEye } from 'react-icons/fa';
 import { useState } from 'react';
 import { profileConfig } from '@/config/info';
 
+interface SocialIcon {
+  paths: string[];
+  size: number;
+}
+
+interface SocialLink {
+  platform: string;
+  url: string;
+  icon: SocialIcon;
+}
+
 export default function HomeContent() {
   const [showRightContent, setShowRightContent] = useState(false);
 
@@ -83,37 +94,50 @@ export default function HomeContent() {
             >
               <FaEye size={18} />
               <span className="text-sm">899,215</span>
-            </motion.div>
-
-            {profileConfig.socialLinks.map((social, index) => (
               <motion.a
-                key={social.platform}
-                href={social.url}
+                href="https://github.com/TilarnaExedilica/Personal-Profile---NextJS"
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.3,
-                  delay: 2.2 + (index * 0.1),
-                  ease: [0.43, 0.13, 0.23, 0.96]
-                }}
-                whileHover={{ scale: 1.2 }}
-                className="text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.2 }}
+                className="ml-2 text-sm text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={social.icon.size}
-                  height={social.icon.size}
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  {social.icon.paths.map((path, i) => (
-                    <path key={i} d={path} />
-                  ))}
-                </svg>
+                Open Source
               </motion.a>
-            ))}
+            </motion.div>
+
+            {profileConfig.socialLinks && profileConfig.socialLinks.length > 0 && (
+              profileConfig.socialLinks.map((social: SocialLink, index: number) => (
+                <motion.a
+                  key={social.platform}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: 2.2 + (index * 0.1),
+                    ease: [0.43, 0.13, 0.23, 0.96]
+                  }}
+                  whileHover={{ scale: 1.2 }}
+                  className="text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={social.icon.size}
+                    height={social.icon.size}
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    {social.icon.paths.map((path: string, i: number) => (
+                      <path key={i} d={path} />
+                    ))}
+                  </svg>
+                </motion.a>
+              ))
+            )}
           </div>
 
           {/* Line phải */}
