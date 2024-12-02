@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
 export default function RightContent() {
@@ -12,8 +12,30 @@ export default function RightContent() {
   };
 
   const contentVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { 
+      opacity: 0,
+      y: 10,
+      transition: { 
+        duration: 0.15,
+        ease: "easeIn"
+      }
+    },
+    visible: { 
+      opacity: 1,
+      y: 0,
+      transition: { 
+        duration: 0.25,
+        ease: [0.4, 0, 0.2, 1]
+      }
+    },
+    exit: { 
+      opacity: 0,
+      y: -10,
+      transition: { 
+        duration: 0.15,
+        ease: "easeOut"
+      }
+    }
   };
 
   const menuItems = [
@@ -25,11 +47,23 @@ export default function RightContent() {
   const renderContent = () => {
     switch (activeTab) {
       case 'collection':
-        return <div>Nội dung Collection</div>;
+        return (
+          <div className="min-h-[300px]">
+            Nội dung Collection
+          </div>
+        );
       case 'timeline':
-        return <div>Nội dung Timeline</div>;
+        return (
+          <div className="min-h-[300px]">
+            Nội dung Timeline
+          </div>
+        );
       case 'comments':
-        return <div>Nội dung Comments</div>;
+        return (
+          <div className="min-h-[300px]">
+            Nội dung Comments
+          </div>
+        );
       default:
         return null;
     }
@@ -49,17 +83,19 @@ export default function RightContent() {
           <button
             key={item.id}
             onClick={() => setActiveTab(item.id)}
-            className={`flex-1 px-4 py-2 rounded-lg capitalize flex items-center justify-center gap-2 ${
+            className={`flex-1 px-4 py-2 rounded-lg capitalize flex items-center justify-center gap-2 transition-colors duration-300 ease-in-out ${
               activeTab === item.id 
                 ? 'bg-[var(--primary)] text-white' 
                 : 'hover:bg-black/20 text-gray-300'
             }`}
           >
             <span>{item.label}</span>
-            <span className={`px-2 py-0.5 rounded-lg text-sm ${
-              activeTab === item.id 
-                ? 'bg-white/20' 
-                : 'bg-gray-700'
+            <span className={`px-2 py-0.5 rounded-lg text-sm transition-colors duration-300 ease-in-out ${
+              item.id === 'collection' 
+                ? 'bg-[var(--accent-lime)] text-black'
+                : item.id === 'timeline'
+                  ? 'bg-[var(--accent-purple)] text-black'
+                  : 'bg-[var(--accent-pink)] text-black'
             }`}>
               {item.count}
             </span>
@@ -69,11 +105,11 @@ export default function RightContent() {
         <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gray-700/50" />
         
         <motion.div 
-          className="absolute bottom-0 h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+          className="absolute bottom-0 h-[2px] bg-gradient-to-r from-[var(--accent-lime)] via-[var(--accent-purple)] to-[var(--accent-pink)]"
           initial={false}
           animate={{
             left: `${menuItems.findIndex(item => item.id === activeTab) * 33.33}%`,
-            width: '33.33%'
+            width: '30%'
           }}
           transition={{
             type: "spring",
@@ -83,14 +119,17 @@ export default function RightContent() {
         />
       </div>
 
-      <motion.div
-        variants={contentVariants}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.5, delay: 2.5 }}
-      >
-        {renderContent()}
-      </motion.div>
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={activeTab}
+          variants={contentVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          {renderContent()}
+        </motion.div>
+      </AnimatePresence>
     </motion.div>
   );
 }

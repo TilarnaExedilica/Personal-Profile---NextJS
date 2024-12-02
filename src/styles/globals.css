@@ -20,6 +20,11 @@
   --line-color: #ffffff;
   --icon-color: rgba(255, 255, 255, 0.7);
   --icon-hover-color: #ffffff;
+
+  /* Accent colors */
+  --accent-lime: #d6f27b;
+  --accent-purple: #c5b5ff;
+  --accent-pink: #fea7da;
 }
 
 body {
