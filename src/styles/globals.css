@@ -29,24 +29,21 @@ body {
   font-family: var(--font-lexend-deca);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body {
     overflow-y: auto !important;
   }
 }
 
-/* Ẩn thanh scroll cho tất cả các trình duyệt */
 * {
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
 }
 
-/* Ẩn thanh scroll cho Chrome, Safari và Opera */
 *::-webkit-scrollbar {
   display: none !important;
 }
 
-/* Đảm bảo overflow-y-auto vẫn hoạt động */
 .overflow-y-auto {
   overflow-y: auto !important;
 }
