@@ -6,7 +6,7 @@ import avatarImage from '@/assets/images/ken.png';
 import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
 import { FaChevronRight } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { profileConfig } from '@/config/info';
 
 interface SocialIcon {
@@ -22,20 +22,35 @@ interface SocialLink {
 
 export default function HomeContent() {
   const [showRightContent, setShowRightContent] = useState(false);
+  const [bannerHeight, setBannerHeight] = useState(window.innerWidth >= 640 ? "200px" : "145px");
+
+  useEffect(() => {
+    const handleResize = () => {
+      setBannerHeight(window.innerWidth >= 640 ? "200px" : "145px");
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className="relative flex flex-col min-h-screen">
       {/* Banner section */}
       <motion.div 
         initial={{ height: "100vh", opacity: 0 }}
-        animate={{ 
-          height: "200px",
-          opacity: 1
+        animate={{
+          height: [
+            "100vh",
+            bannerHeight
+          ],
+          opacity: [0, 1]
         }}
         transition={{ 
           duration: 1.5,
           ease: "easeInOut",
+          times: [0, 1]
         }}
+        style={{ height: bannerHeight }} 
         className="relative w-full overflow-hidden"
       >
         <motion.div
@@ -161,12 +176,12 @@ export default function HomeContent() {
           delay: 1.8,
           ease: [0.43, 0.13, 0.23, 0.96]
         }}
-        className="absolute left-[40px] sm:left-[70px] top-[120px] flex items-center z-50"
+        className="absolute left-[30px] sm:left-[70px] top-[90px] sm:top-[120px] flex items-center z-50"
       >
         <div className="relative">
-          <div className="absolute w-[100px] h-[100px] sm:w-[140px] sm:h-[140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--avatar-backdrop)] backdrop-blur-none" />
+          <div className="absolute w-[80px] h-[80px] sm:w-[140px] sm:h-[140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--avatar-backdrop)] backdrop-blur-none" />
           
-          <div className="relative w-[90px] h-[90px] sm:w-[120px] sm:h-[120px] rounded-full overflow-hidden shadow-lg">
+          <div className="relative w-[70px] h-[70px] sm:w-[120px] sm:h-[120px] rounded-full overflow-hidden shadow-lg">
             <Image
               src={avatarImage}
               alt="Avatar"
@@ -227,4 +242,3 @@ export default function HomeContent() {
     </div>
   );
 } 
-
