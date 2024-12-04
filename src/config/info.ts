@@ -15,7 +15,17 @@ export const profileConfig = {
     {
       type: "skills",
       title: "Core Skills",
-      description: "Specialized in Flutter, Vue, Nextjs, TypeScript, and UI/UX design..."
+      description: "![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat&logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=flat&logo=dart&logoColor=white) ![Godot](https://img.shields.io/badge/Godot-%23478CBF.svg?style=flat&logo=godot-engine&logoColor=white) ![Python](https://img.shields.io/badge/Python-%2314354C.svg?style=flat&logo=python&logoColor=white) ![Vue](https://img.shields.io/badge/Vue.js-%234FC08D.svg?style=flat&logo=vue.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-%2361DAFB.svg?style=flat&logo=react&logoColor=black) ![Next.js](https://img.shields.io/badge/Next.js-%23000000.svg?style=flat&logo=next.js&logoColor=white)"
+    },
+    {
+      type: "other skills",
+      title: "Other Skills",
+      description: "![Unity](https://img.shields.io/badge/Unity-%23000000.svg?style=flat&logo=unity&logoColor=white)![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=flat&logo=c-sharp&logoColor=white)![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?style=flat&logo=php&logoColor=white)![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black)![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?style=flat&logo=laravel&logoColor=white)![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=flat&logo=node.js&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=flat&logo=npm&logoColor=white)![MySQL](https://img.shields.io/badge/MySQL-%234479A1.svg?style=flat&logo=mysql&logoColor=white)![MariaDB](https://img.shields.io/badge/MariaDB-%23003539.svg?style=flat&logo=mariadb&logoColor=white)![CRM](https://img.shields.io/badge/CRM-%23FF8200.svg?style=flat&logo=crm&logoColor=white)![Angular](https://img.shields.io/badge/Angular-%23DD0031.svg?style=flat&logo=angular&logoColor=white)"
+    },
+    {
+      type: "design tools",
+      title: "Design Tools",
+      description: "![CorelDraw](https://img.shields.io/badge/CorelDraw-%23FF005A.svg?style=flat&logo=coreldraw&logoColor=white)![Adobe Illustrator](https://img.shields.io/badge/Adobe%20Illustrator-%23FF9A00.svg?style=flat&logo=adobe%20illustrator&logoColor=white)![Adobe Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-%2300599C.svg?style=flat&logo=adobe%20photoshop&logoColor=white)![Figma](https://img.shields.io/badge/Figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white)![Capcut](https://img.shields.io/badge/Capcut-%23000000.svg?style=flat&logo=capcut&logoColor=white)"
     }
   ],
   contactInfo: [

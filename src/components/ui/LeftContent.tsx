@@ -1,6 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import { profileConfig } from '@/config/info';
+import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
 
 export default function LeftContent() {
   const containerVariants = {
@@ -149,9 +151,30 @@ export default function LeftContent() {
             <h1 className="text-base md:text-lg font-medium text-[var(--text-primary)]">
               {intro.title}
             </h1>
-            <p className="text-sm md:text-base text-[var(--text-primary)] opacity-80 leading-relaxed">
-              {intro.description}
-            </p>
+            <div className="text-sm md:text-base text-[var(--text-primary)] opacity-80 leading-relaxed prose prose-invert">
+              <ReactMarkdown
+                components={{
+                  p: ({ children }) => (
+                    <div className="flex flex-row flex-wrap gap-1 items-center">
+                      {children}
+                    </div>
+                  ),
+                  img: ({ src, alt }) => (
+                    <Image 
+                      src={src || ''}
+                      alt={alt || ''}
+                      width={100}
+                      height={24}
+                      className="inline-block h-6 !my-0 !align-middle"
+                      unoptimized
+                      style={{ height: '1.5rem', width: 'auto' }}
+                    />
+                  )
+                }}
+              >
+                {intro.description}
+              </ReactMarkdown>
+            </div>
           </motion.div>
         ))}
 
