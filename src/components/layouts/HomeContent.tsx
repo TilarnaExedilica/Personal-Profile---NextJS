@@ -22,9 +22,12 @@ interface SocialLink {
 
 export default function HomeContent() {
   const [showRightContent, setShowRightContent] = useState(false);
-  const [bannerHeight, setBannerHeight] = useState(window.innerWidth >= 640 ? "200px" : "145px");
+  const [bannerHeight, setBannerHeight] = useState("145px");
 
   useEffect(() => {
+    // Set initial banner height after component mounts
+    setBannerHeight(window.innerWidth >= 640 ? "200px" : "145px");
+
     const handleResize = () => {
       setBannerHeight(window.innerWidth >= 640 ? "200px" : "145px");
     };

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import TabCollection from './TabCollection';
 import TabTimeline from './TabTimeline';
-import TabComments from './TabComments';
+import TabBlog from './TabBlog';
 
 export default function RightContent() {
   const [activeTab, setActiveTab] = useState('collection');
@@ -43,8 +43,8 @@ export default function RightContent() {
 
   const menuItems = [
     { id: 'collection', label: 'Collection', count: 256 },
+    { id: 'blog', label: 'Blogs', count: 16 },
     { id: 'timeline', label: 'Timeline', count: 4 },
-    { id: 'comments', label: 'Comments', count: 16 },
   ];
 
   const renderContent = () => {
@@ -53,8 +53,8 @@ export default function RightContent() {
         return <TabCollection />;
       case 'timeline':
         return <TabTimeline />;
-      case 'comments':
-        return <TabComments />;
+      case 'blog':
+        return <TabBlog />;
       default:
         return null;
     }
