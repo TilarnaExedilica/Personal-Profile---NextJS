@@ -67,7 +67,7 @@ export default function RightContent() {
       animate="visible"
       exit="exit"
       transition={{ duration: 0.8, delay: 1.7, ease: "easeOut" }}
-      className="h-[calc(100vh-200px)] w-full p-4 pt-16 md:p-8 bg-[var(--right-section-bg)] text-[var(--text-secondary)] md:rounded-tl-[32px] md:hover:scale-[1.02] relative z-10"
+      className="w-full h-full overflow-y-auto scrollbar-hide bg-[var(--right-section-bg)] text-[var(--text-secondary)] p-4 pt-4 md:p-8 md:pt-6"
     >
       <div className="flex w-full space-x-2 sm:space-x-4 mb-6 bg-[var(--menu-bg)] p-1 sm:p-2 rounded-xl relative">
         {menuItems.map((item) => (

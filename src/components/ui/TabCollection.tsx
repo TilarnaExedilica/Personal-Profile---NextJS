@@ -9,6 +9,13 @@ export default function TabCollection() {
         <div className="bg-[var(--menu-bg)] p-4 rounded-lg">Item Collection 1</div>
         <div className="bg-[var(--menu-bg)] p-4 rounded-lg">Item Collection 2</div>
         <div className="bg-[var(--menu-bg)] p-4 rounded-lg">Item Collection 3</div>
+        <div className="bg-[var(--menu-bg)] p-4 rounded-lg">Item Collection 4</div>
+        <div className="bg-[var(--menu-bg)] p-4 rounded-lg">Item Collection 5</div>
+        <div className="bg-[var(--menu-bg)] p-4 rounded-lg">Item Collection 6</div>
+        <div className="bg-[var(--menu-bg)] p-4 rounded-lg">Item Collection 7</div>
+        <div className="bg-[var(--menu-bg)] p-4 rounded-lg">Item Collection 8</div>
+        <div className="bg-[var(--menu-bg)] p-4 rounded-lg">Item Collection 9</div>
+        <div className="bg-[var(--menu-bg)] p-4 rounded-lg">Item Collection 10</div>
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ export default function LeftContent() {
         delay: 1.5,
         ease: "easeOut"
       }}
-      className="w-full h-[calc(100vh-200px)] overflow-y-auto scrollbar-hide p-4 pt-16 md:p-8 md:pt-16 pl-8 md:pl-12 lg:pl-16 text-[var(--text-primary)] relative z-10"
+      className="w-full h-full overflow-y-auto scrollbar-hide p-4 pt-16 md:p-8 md:pt-16 pl-8 md:pl-12 lg:pl-16 text-[var(--text-primary)] relative z-10"
     >
       <motion.div
         variants={childrenVariants}

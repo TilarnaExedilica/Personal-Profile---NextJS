@@ -84,9 +84,7 @@ export default function HomeContent() {
           className="absolute inset-0 bg-[var(--banner-overlay)] backdrop-blur-[8px]" 
         />
 
-        {/* Container cho line và icons */}
         <div className="absolute top-[40px] w-full flex items-center">
-          {/* Line trái */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -156,7 +154,6 @@ export default function HomeContent() {
             )}
           </div>
 
-          {/* Line phải */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -214,7 +211,7 @@ export default function HomeContent() {
       </motion.div>
 
       {/* Content sections */}
-      <div className="flex flex-1 h-[calc(100vh-200px)] relative overflow-hidden">
+      <div className="flex flex-1 relative overflow-hidden h-full">
         <motion.div 
           animate={{ 
             width: showRightContent ? '0%' : '100%',
@@ -224,7 +221,7 @@ export default function HomeContent() {
             duration: 0.3,
             ease: "easeInOut"
           }}
-          className={`h-[calc(100vh-200px)] md:!w-1/2 md:!opacity-100 ${showRightContent ? 'hidden md:block' : ''}`}
+          className={`h-full md:!w-1/2 md:!opacity-100 ${showRightContent ? 'hidden md:block' : ''}`}
         >
           <LeftContent />
         </motion.div>
@@ -237,7 +234,7 @@ export default function HomeContent() {
             duration: 0.3,
             ease: "easeInOut"
           }}
-          className={`h-[calc(100vh-200px)] md:!w-1/2 md:!opacity-100 ${!showRightContent ? 'hidden md:block' : ''}`}
+          className={`flex-1 md:!w-1/2 md:!opacity-100 ${!showRightContent ? 'hidden md:block' : ''}`}
         >
           <RightContent />
         </motion.div>
