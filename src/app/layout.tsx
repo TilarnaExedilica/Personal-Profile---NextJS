@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@/styles/globals.css";
+import { profileConfig } from "@/config/info";
 
 const lexendDeca = localFont({
   src: [
@@ -45,7 +46,7 @@ const lexendDeca = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Personal Profile",
+  title: profileConfig.name,
   description: "Personal Profile",
   icons: {
     icon: '/favicon.ico',
