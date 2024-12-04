@@ -5,7 +5,7 @@ import backgroundImage from '@/assets/images/background_01.jpg';
 import avatarImage from '@/assets/images/ken.png';
 import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
-import {  FaChevronRight, FaEye } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 import { useState } from 'react';
 import { profileConfig } from '@/config/info';
 
@@ -92,8 +92,6 @@ export default function HomeContent() {
               }}
               className="flex items-center gap-2 text-[var(--icon-color)]"
             >
-              <FaEye size={18} />
-              <span className="text-sm">899,215</span>
               <motion.a
                 href="https://github.com/TilarnaExedilica/Personal-Profile---NextJS"
                 target="_blank"
@@ -101,7 +99,7 @@ export default function HomeContent() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.2 }}
-                className="ml-2 text-sm text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
+                className="text-sm text-[var(--icon-color)] hover:text-[var(--icon-hover-color)] transition-colors"
               >
                 Open Source
               </motion.a>
@@ -163,12 +161,12 @@ export default function HomeContent() {
           delay: 1.8,
           ease: [0.43, 0.13, 0.23, 0.96]
         }}
-        className="absolute left-[70px] top-[120px] flex items-center z-50"
+        className="absolute left-[40px] sm:left-[70px] top-[120px] flex items-center z-50"
       >
         <div className="relative">
-          <div className="absolute w-[140px] h-[140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--avatar-backdrop)] backdrop-blur-none" />
+          <div className="absolute w-[100px] h-[100px] sm:w-[140px] sm:h-[140px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--avatar-backdrop)] backdrop-blur-none" />
           
-          <div className="relative w-[120px] h-[120px] rounded-full overflow-hidden shadow-lg">
+          <div className="relative w-[90px] h-[90px] sm:w-[120px] sm:h-[120px] rounded-full overflow-hidden shadow-lg">
             <Image
               src={avatarImage}
               alt="Avatar"
