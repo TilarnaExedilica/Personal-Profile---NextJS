@@ -211,7 +211,7 @@ export default function HomeContent() {
       </motion.div>
 
       {/* Content sections */}
-      <div className="flex flex-1 relative overflow-hidden h-full">
+      <div className="flex flex-1 relative overflow-y-auto h-full">
         <motion.div 
           animate={{ 
             width: showRightContent ? '0%' : '100%',
@@ -221,7 +221,7 @@ export default function HomeContent() {
             duration: 0.3,
             ease: "easeInOut"
           }}
-          className={`h-full md:!w-1/2 md:!opacity-100 ${showRightContent ? 'hidden md:block' : ''}`}
+          className={`h-full overflow-y-auto md:!w-1/2 md:!opacity-100 ${showRightContent ? 'hidden md:block' : ''}`}
         >
           <LeftContent />
         </motion.div>
@@ -234,7 +234,7 @@ export default function HomeContent() {
             duration: 0.3,
             ease: "easeInOut"
           }}
-          className={`flex-1 md:!w-1/2 md:!opacity-100 ${!showRightContent ? 'hidden md:block' : ''}`}
+          className={`flex-1 overflow-y-auto md:!w-1/2 md:!opacity-100 ${!showRightContent ? 'hidden md:block' : ''}`}
         >
           <RightContent />
         </motion.div>
