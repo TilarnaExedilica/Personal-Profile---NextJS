@@ -1,31 +1,56 @@
 {
   "name": "Tilarna",
   "codename": "@tilarnaexedilica",
-  "introduction": [
+  "jobTags": [
     {
-      "type": "greeting",
-      "title": "Hello! I'm Tilarna (SangPham)",
-      "description": "A passionate individual who embodies the harmonious blend of a programmer's logic and a designer's creativity. With a keen eye for aesthetics and a love for coding, I am on a perpetual journey to bridge the digital world with captivating visuals."
+      "title": "Available For Work",
+      "icon": {
+        "paths": [
+          "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+        ],
+        "size": 14
+      },
+      "colors": {
+        "background": "#15803d",
+        "text": "#ffffff"
+      },
+      "borders": {
+        "color": "#14532d"
+      }
     },
     {
-      "type": "experience",
-      "title": "Experience",
-      "description": "1 years of experience in frontend & mobile development..."
+      "title": "UI/UX Designer",
+      "icon": {
+        "paths": [
+          "M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2"
+        ],
+        "size": 14
+      },
+      "colors": {
+        "background": "#1f3f7c",
+        "text": "#ffffff"
+      },
+      "borders": {
+        "color": "#0b254c"
+      }
     },
     {
-      "type": "skills",
-      "title": "Core Technologies",
-      "description": "![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat&logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=flat&logo=dart&logoColor=white) ![Godot](https://img.shields.io/badge/Godot-%23478CBF.svg?style=flat&logo=godot-engine&logoColor=white) ![Python](https://img.shields.io/badge/Python-%2314354C.svg?style=flat&logo=python&logoColor=white) ![Vue](https://img.shields.io/badge/Vue.js-%234FC08D.svg?style=flat&logo=vue.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-%2361DAFB.svg?style=flat&logo=react&logoColor=black)![Next.js](https://img.shields.io/badge/Next.js-%23000000.svg?style=flat&logo=next.js&logoColor=white)"
-    },
-    {
-      "type": "other skills",
-      "title": "Extended Knowledge",
-      "description": "![Unity](https://img.shields.io/badge/Unity-%23000000.svg?style=flat&logo=unity&logoColor=white)![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=flat&logo=c-sharp&logoColor=white)![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?style=flat&logo=php&logoColor=white)![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black)![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?style=flat&logo=laravel&logoColor=white)![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=flat&logo=node.js&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=flat&logo=npm&logoColor=white)![MySQL](https://img.shields.io/badge/MySQL-%234479A1.svg?style=flat&logo=mysql&logoColor=white)![MariaDB](https://img.shields.io/badge/MariaDB-%23003539.svg?style=flat&logo=mariadb&logoColor=white)![CRM](https://img.shields.io/badge/CRM-%23FF8200.svg?style=flat&logo=crm&logoColor=white)![Angular](https://img.shields.io/badge/Angular-%23DD0031.svg?style=flat&logo=angular&logoColor=white)"
-    },
-    {
-      "type": "design tools",
-      "title": "Design Tools",
-      "description": "![CorelDraw](https://img.shields.io/badge/CorelDraw-%23FF005A.svg?style=flat&logo=coreldraw&logoColor=white)![Adobe Illustrator](https://img.shields.io/badge/Adobe%20Illustrator-%23FF9A00.svg?style=flat&logo=adobe%20illustrator&logoColor=white)![Adobe Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-%2300599C.svg?style=flat&logo=adobe%20photoshop&logoColor=white)![Figma](https://img.shields.io/badge/Figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white)![Capcut](https://img.shields.io/badge/Capcut-%23000000.svg?style=flat&logo=capcut&logoColor=white)"
+      "title": "Frontend Engineer",
+      "icon": {
+        "paths": [
+          "M18 8L22 12L18 16",
+          "M6 8L2 12L6 16",
+          "M14.5 4L9.5 20"
+        ],
+        "size": 14
+      },
+      "colors": {
+        "background": "#06b6d4",
+        "text": "#ffffff"
+      },
+      "borders": {
+        "color": "#0891b2"
+      }
     }
   ],
   "contactInfo": [
@@ -76,6 +101,33 @@
       }
     }
   ],
+  "introduction": [
+    {
+      "type": "greeting",
+      "title": "Hello! I'm Tilarna (SangPham)",
+      "description": "A passionate individual who embodies the harmonious blend of a programmer's logic and a designer's creativity. With a keen eye for aesthetics and a love for coding, I am on a perpetual journey to bridge the digital world with captivating visuals."
+    },
+    {
+      "type": "experience",
+      "title": "Experience",
+      "description": "![1 Year](https://img.shields.io/badge/1%20YEAR-Frontend%20%26%20mobile%20development-202024?logo=dev.to&labelColor=000000&logoColor=white) Professional development experience with strong focus on user experience and clean code practices."
+    },
+    {
+      "type": "skills",
+      "title": "Core Technologies",
+      "description": "![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat&logo=flutter&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=flat&logo=dart&logoColor=white) ![Godot](https://img.shields.io/badge/Godot-%23478CBF.svg?style=flat&logo=godot-engine&logoColor=white) ![Python](https://img.shields.io/badge/Python-%2314354C.svg?style=flat&logo=python&logoColor=white) ![Vue](https://img.shields.io/badge/Vue.js-%234FC08D.svg?style=flat&logo=vue.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-%2361DAFB.svg?style=flat&logo=react&logoColor=black)![Next.js](https://img.shields.io/badge/Next.js-%23000000.svg?style=flat&logo=next.js&logoColor=white)"
+    },
+    {
+      "type": "other skills",
+      "title": "Extended Knowledge",
+      "description": "![Unity](https://img.shields.io/badge/Unity-%23000000.svg?style=flat&logo=unity&logoColor=white)![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=flat&logo=c-sharp&logoColor=white)![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?style=flat&logo=php&logoColor=white)![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black)![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?style=flat&logo=laravel&logoColor=white)![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?style=flat&logo=node.js&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=flat&logo=npm&logoColor=white)![MySQL](https://img.shields.io/badge/MySQL-%234479A1.svg?style=flat&logo=mysql&logoColor=white)![MariaDB](https://img.shields.io/badge/MariaDB-%23003539.svg?style=flat&logo=mariadb&logoColor=white)![CRM](https://img.shields.io/badge/CRM-%23FF8200.svg?style=flat&logo=crm&logoColor=white)![Angular](https://img.shields.io/badge/Angular-%23DD0031.svg?style=flat&logo=angular&logoColor=white)"
+    },
+    {
+      "type": "design tools",
+      "title": "Design Tools",
+      "description": "![CorelDraw](https://img.shields.io/badge/CorelDraw-%23FF005A.svg?style=flat&logo=coreldraw&logoColor=white)![Adobe Illustrator](https://img.shields.io/badge/Adobe%20Illustrator-%23FF9A00.svg?style=flat&logo=adobe%20illustrator&logoColor=white)![Adobe Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-%2300599C.svg?style=flat&logo=adobe%20photoshop&logoColor=white)![Figma](https://img.shields.io/badge/Figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white)![Capcut](https://img.shields.io/badge/Capcut-%23000000.svg?style=flat&logo=capcut&logoColor=white)"
+    }
+  ],
   "socialLinks": [
     {
       "platform": "github",
@@ -105,58 +157,6 @@
           "M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
         ],
         "size": 18
-      }
-    }
-  ],
-  "jobTags": [
-    {
-      "title": "Available For Work",
-      "icon": {
-        "paths": [
-          "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-        ],
-        "size": 14
-      },
-      "colors": {
-        "background": "#15803d",
-        "text": "#ffffff"
-      },
-      "borders": {
-        "color": "#14532d"
-      }
-    },
-    {
-      "title": "UI/UX Designer",
-      "icon": {
-        "paths": [
-          "M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2"
-        ],
-        "size": 14
-      },
-      "colors": {
-        "background": "#1f3f7c",
-        "text": "#ffffff"
-      },
-      "borders": {
-        "color": "#0b254c"
-      }
-    },
-    {
-      "title": "Frontend Engineer",
-      "icon": {
-        "paths": [
-          "M18 8L22 12L18 16",
-          "M6 8L2 12L6 16",
-          "M14.5 4L9.5 20"
-        ],
-        "size": 14
-      },
-      "colors": {
-        "background": "#06b6d4",
-        "text": "#ffffff"
-      },
-      "borders": {
-        "color": "#0891b2"
       }
     }
   ]

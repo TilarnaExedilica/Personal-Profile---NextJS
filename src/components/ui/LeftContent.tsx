@@ -80,7 +80,6 @@ export default function LeftContent() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  {tag.icon.path && <path d={tag.icon.path} />}
                   {tag.icon.paths?.map((path, i) => (
                     <path key={i} d={path} />
                   ))}
@@ -146,7 +145,7 @@ export default function LeftContent() {
           <motion.div 
             key={index}
             variants={itemVariants}
-            className={`mt-8 pl-4 border-l-2 border-[var(--text-primary)] border-opacity-20`}
+            className={`mt-6 pl-4 border-l-2 border-[var(--text-primary)] border-opacity-20`}
           >
             <h1 className="text-base md:text-lg font-medium text-[var(--text-primary)]">
               {intro.title}
