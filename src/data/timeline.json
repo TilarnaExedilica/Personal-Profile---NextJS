@@ -1,4 +1,9 @@
 {
+    "notes": [
+        "Currently, I am working for a company while learning more about Frontend and Design",
+        "If I have free time, I will develop a manga reading app",
+        "At the beginning of 2025, I will join military service, so I will limit long-term activities and see you again in 2028"
+    ],
   "timelines": [
     {
       "id": "timeline_001",
@@ -33,4 +38,5 @@
       "image_url": ""
     }
   ]
+ 
 } 

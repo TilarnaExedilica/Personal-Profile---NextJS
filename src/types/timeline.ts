@@ -1,5 +1,6 @@
 export interface Timeline {
   timelines: TimelineItem[];
+  notes?: string[];
 }
 
 export interface TimelineItem {

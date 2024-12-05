@@ -9,8 +9,23 @@ export default function TabTimeline() {
   
   return (
     <div className="min-h-[300px] p-4">
-      <h2 className="text-2xl font-bold mb-8">Timeline</h2>
       
+      {/* Notes Section */}
+      {timelineConfig.notes && timelineConfig.notes.length > 0 && (
+        <div className="mb-8 bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800">
+          <h4 className="text-lg font-semibold text-[var(--accent-purple)] mb-4">Notes:</h4>
+          <ul className="space-y-2">
+            {timelineConfig.notes.map((note, index) => (
+              <li key={index} className="flex items-start gap-2 text-gray-300">
+                <span className="text-[var(--accent-purple)] mt-1">•</span>
+                <span>{note}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Timeline Section */}
       <div className="relative">
         <div className="absolute right-[15px] top-0 bottom-0 w-[2px] bg-gray-600" />
         
