@@ -12,7 +12,7 @@ export default function TabTimeline() {
       
       {/* Notes Section */}
       {timelineConfig.notes && timelineConfig.notes.length > 0 && (
-        <div className="mb-8 bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800">
+        <div className="mb-8 bg-gray-600/20 backdrop-blur-sm p-6 rounded-xl border-2 border-gray-600">
           <h4 className="text-lg font-semibold text-[var(--accent-purple)] mb-4">Notes:</h4>
           <ul className="space-y-2">
             {timelineConfig.notes.map((note, index) => (
