@@ -12,7 +12,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
         disabled={currentPage === 1}
         className="px-3 py-1 rounded-md bg-[var(--menu-bg)] text-[var(--menu-text)] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[var(--menu-hover)] transition-colors"
       >
-        Trước
+        Previous
       </button>
       
       <div className="flex gap-2">
@@ -36,7 +36,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
         disabled={currentPage === totalPages}
         className="px-3 py-1 rounded-md bg-[var(--menu-bg)] text-[var(--menu-text)] disabled:opacity-50 disabled:cursor-not-allowed hover:bg-[var(--menu-hover)] transition-colors"
       >
-        Sau
+        Next
       </button>
     </div>
   );

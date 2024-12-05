@@ -19,6 +19,8 @@ export default function GridViewItem({
   return (
     <Link 
       href={link}
+      target="_blank"
+      rel="noopener noreferrer"
       className="group block bg-[var(--menu-bg)] rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300"
     >
       <div className="p-4 space-y-4">
