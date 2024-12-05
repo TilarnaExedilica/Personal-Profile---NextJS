@@ -6,7 +6,7 @@
       "description": "Khám phá cách tạo giao diện người dùng hiện đại và thu hút cho ứng dụng di động sử dụng Figma và các nguyên tắc thiết kế Material Design",
       "thumbnail_url": "https://example.com/images/ui-design-thumb.jpg",
       "post_url": "https://example.com/posts/modern-ui-design",
-      "posted_date": "2024-03-15",
+      "posted_date": "2024-12-15",
       "tags": ["UI/UX", "Mobile", "Design", "Figma"],
       "category": "Design"
     },
@@ -16,18 +16,18 @@
       "description": "Hướng dẫn chi tiết về cách xây dựng REST API sử dụng NextJS 14, Prisma và PostgreSQL với các tính năng authentication và authorization",
       "thumbnail_url": "https://example.com/images/nextjs-api-thumb.jpg",
       "post_url": "https://example.com/posts/nextjs-api-guide",
-      "posted_date": "2024-03-10",
+      "posted_date": "2024-11-10",
       "tags": ["NextJS", "API", "Backend", "TypeScript"],
       "category": "Development"
     },
     {
       "id": "col_003",
-      "title": "Animation với Framer Motion",
-      "description": "Tìm hiểu cách tạo các animation mượt mà và chuyên nghiệp trong React với thư viện Framer Motion",
-      "thumbnail_url": "https://example.com/images/framer-motion-thumb.jpg", 
-      "post_url": "https://example.com/posts/framer-motion-guide",
-      "posted_date": "2024-03-05",
-      "tags": ["React", "Animation", "Frontend"],
+      "title": "FieryGG - Flutter Dribble UI Demo",
+      "description": "FieryGG is a UI demo project built with Flutter, inspired by a design on Dribbble. This project showcases the ability to create beautiful and responsive user interfaces using Flutter.",
+      "thumbnail_url": "https://raw.githubusercontent.com/TilarnaExedilica/FieryGG---Flutter-Dribble-UI-Demo/refs/heads/main/assets/images/dribble_author.png", 
+      "post_url": "https://github.com/TilarnaExedilica/FieryGG---Flutter-Dribble-UI-Demo",
+      "posted_date": "2024-10-29",
+      "tags": ["Flutter", "Demo", "Frontend", "UI/UX", "Challenge"],
       "category": "Development"
     }
   ]
