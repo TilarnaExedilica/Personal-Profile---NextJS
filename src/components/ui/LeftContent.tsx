@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { profileConfig } from '@/config/info';
+import { profileConfig } from '@/config/config';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';
 

@@ -1,0 +1,27 @@
+{
+  "timelines": [
+    {
+      "id": "timeline_001",
+      "title": "Ra mắt dự án Portfolio",
+      "subtitle": "Phát triển cá nhân",
+      "description": "Hoàn thành và ra mắt phiên bản đầu tiên của website portfolio cá nhân sử dụng Next.js và Tailwind CSS",
+      "time": "2024-03-20",
+      "image_url": "https://example.com/images/portfolio-launch.jpg"
+    },
+    {
+      "id": "timeline_002",
+      "title": "Học Machine Learning",
+      "subtitle": "Khóa học online",
+      "description": "Bắt đầu khóa học Machine Learning cơ bản trên Coursera, tập trung vào các thuật toán và ứng dụng thực tế",
+      "time": "2024-03-15"
+    },
+    {
+      "id": "timeline_003",
+      "title": "Dự án Open Source",
+      "subtitle": "Đóng góp cộng đồng",
+      "description": "Tham gia đóng góp vào dự án open source về React components library, tập trung vào phát triển các components accessibility",
+      "time": "2024-03-10",
+      "image_url": "https://example.com/images/opensource-contrib.jpg"
+    }
+  ]
+} 

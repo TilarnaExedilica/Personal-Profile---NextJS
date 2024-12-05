@@ -7,7 +7,7 @@ import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
 import { FaChevronRight } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
-import { profileConfig } from '@/config/info';
+import { profileConfig } from '@/config/config';
 
 interface SocialIcon {
   paths: string[];

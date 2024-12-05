@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "@/styles/globals.css";
-import { profileConfig } from "@/config/info";
+import { profileConfig } from "@/config/config";
 
 const lexendDeca = localFont({
   src: [
