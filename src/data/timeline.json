@@ -2,26 +2,35 @@
   "timelines": [
     {
       "id": "timeline_001",
-      "title": "Ra mắt dự án Portfolio",
-      "subtitle": "Phát triển cá nhân",
-      "description": "Hoàn thành và ra mắt phiên bản đầu tiên của website portfolio cá nhân sử dụng Next.js và Tailwind CSS",
-      "time": "2024-03-20",
-      "image_url": "https://example.com/images/portfolio-launch.jpg"
+      "title": "Started College Journey at CTIM",
+      "subtitle": "Higher Education",
+      "description": "Embarked on an exciting academic journey at CTIM College, pursuing a dual degree in Information Technology and Graphic Design, laying the foundation for a versatile career in tech and creative fields",
+      "time": "2021-08-01",
+      "image_url": ""
     },
     {
-      "id": "timeline_002",
-      "title": "Học Machine Learning",
-      "subtitle": "Khóa học online",
-      "description": "Bắt đầu khóa học Machine Learning cơ bản trên Coursera, tập trung vào các thuật toán và ứng dụng thực tế",
-      "time": "2024-03-15"
+      "id": "timeline_002", 
+      "title": "2D Designer Fresher Position",
+      "subtitle": "Career Start",
+      "description": "Began professional career as a 2D Designer, working on various creative projects and developing practical skills in digital design while building a strong portfolio of work",
+      "time": "2022-09-12",
+      "image_url": ""
     },
     {
       "id": "timeline_003",
-      "title": "Dự án Open Source",
-      "subtitle": "Đóng góp cộng đồng",
-      "description": "Tham gia đóng góp vào dự án open source về React components library, tập trung vào phát triển các components accessibility",
-      "time": "2024-03-10",
-      "image_url": "https://example.com/images/opensource-contrib.jpg"
+      "title": "FE & Mobile Developer at CRM Company",
+      "subtitle": "Career Growth",
+      "description": "Transitioned into a challenging role combining Frontend and Mobile development skills, working on innovative CRM solutions and gaining valuable experience in modern development technologies",
+      "time": "2023-10-01",
+      "image_url": ""
+    },
+    {
+      "id": "timeline_004",
+      "title": "Graduated with Dual Degree",
+      "subtitle": "Academic Achievement",
+      "description": "Successfully completed dual bachelor's degree in Information Technology and Graphic Design, demonstrating expertise in both technical and creative domains, ready for new challenges in the tech industry",
+      "time": "2024-03-04",
+      "image_url": ""
     }
   ]
 } 
