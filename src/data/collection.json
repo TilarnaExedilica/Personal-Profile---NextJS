@@ -2,22 +2,22 @@
   "collections": [
     {
       "id": "col_001",
-      "title": "Thiết Kế UI Modern Cho Ứng Dụng Mobile",
-      "description": "Khám phá cách tạo giao diện người dùng hiện đại và thu hút cho ứng dụng di động sử dụng Figma và các nguyên tắc thiết kế Material Design",
-      "thumbnail_url": "https://example.com/images/ui-design-thumb.jpg",
-      "post_url": "https://example.com/posts/modern-ui-design",
-      "posted_date": "2024-12-15",
-      "tags": ["UI/UX", "Mobile", "Design", "Figma"],
-      "category": "Design"
+      "title": "System77-Prototype by Ravimo",
+      "description": "A 2D platformer shooter game made in Godot Engine",
+      "thumbnail_url": "https://camo.githubusercontent.com/e584b631a46e569525ce13e93e8c1e28aa73b357771f7e7f11f1f9177244100c/68747470733a2f2f696d672e697463682e7a6f6e652f615731685a3255764d6a49324f4459784f4338784d7a51304e5441304e533577626d633d2f37393478313030302f4353656f30782e706e67",
+      "post_url": "https://github.com/TilarnaExedilica/system77",
+      "posted_date": "2024-11-1",
+      "tags": ["Godot 4.1", "Game", "2D", "Platformer", "Shooter"],
+      "category": "Game"
     },
     {
       "id": "col_002", 
-      "title": "Xây Dựng API với NextJS 14",
-      "description": "Hướng dẫn chi tiết về cách xây dựng REST API sử dụng NextJS 14, Prisma và PostgreSQL với các tính năng authentication và authorization",
-      "thumbnail_url": "https://example.com/images/nextjs-api-thumb.jpg",
-      "post_url": "https://example.com/posts/nextjs-api-guide",
+      "title": "Grant-tracking---VueJS-Dribble-UI-Demo",
+      "description": "Grant Tracking is a demo user interface project built with Vue.js, inspired by designs on Dribbble. This project showcases the ability to create beautiful and responsive user interfaces using Vue.js.",
+      "thumbnail_url": "https://raw.githubusercontent.com/TilarnaExedilica/Grant-tracking---VueJS-Dribble-UI-Demo/refs/heads/main/src/assets/images/dribble_author.png",
+      "post_url": "https://github.com/TilarnaExedilica/Grant-tracking---VueJS-Dribble-UI-Demo",
       "posted_date": "2024-11-10",
-      "tags": ["NextJS", "API", "Backend", "TypeScript"],
+      "tags": ["VueJS","UI/UX", "Demo", "Challenge","Typescript"],
       "category": "Development"
     },
     {
@@ -29,6 +29,16 @@
       "posted_date": "2024-10-29",
       "tags": ["Flutter", "Demo", "Frontend", "UI/UX", "Challenge"],
       "category": "Development"
-    }
+    },
+    {
+        "id": "col_004",
+        "title": "Pokemon TCG Collections Python Tool",
+        "description": "This is a comprehensive Pokémon data collection, including detailed information about Pokémon and Pokémon Trading Card Game (TCG) sets.",
+        "thumbnail_url": "https://raw.githubusercontent.com/TilarnaExedilica/pokemon-collection-data/refs/heads/main/screenshots/unnamed.png", 
+        "post_url": "https://github.com/TilarnaExedilica/pokemon-collection-data",
+        "posted_date": "2024-12-01",
+        "tags": ["Python", "Tool", "Pokemon", "TCG", "Collections"],
+        "category": "Tools"
+      }
   ]
 } 

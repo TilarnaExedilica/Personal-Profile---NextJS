@@ -4,6 +4,7 @@ import { useState } from 'react';
 import TabCollection from './TabCollection';
 import TabTimeline from './TabTimeline';
 import TabBlog from './TabBlog';
+import { collectionConfig, blogConfig, timelineConfig } from '@/config/config';
 
 export default function RightContent() {
   const [activeTab, setActiveTab] = useState('collection');
@@ -42,9 +43,21 @@ export default function RightContent() {
   };
 
   const menuItems = [
-    { id: 'collection', label: 'Collection', count: 256 },
-    { id: 'blog', label: 'Blogs', count: 16 },
-    { id: 'timeline', label: 'Timeline', count: 4 },
+    { 
+      id: 'collection', 
+      label: 'Collection', 
+      count: collectionConfig.collections.length 
+    },
+    { 
+      id: 'blog', 
+      label: 'Blogs', 
+      count: blogConfig.blogs.length 
+    },
+    { 
+      id: 'timeline', 
+      label: 'Timeline', 
+      count: timelineConfig.timelines.length 
+    },
   ];
 
   const renderContent = () => {
