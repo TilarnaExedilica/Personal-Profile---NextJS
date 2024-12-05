@@ -1,8 +1,8 @@
-export interface Blog {
-  blogs: BlogItem[];
+export interface Share {
+  shares: ShareItem[];
 }
 
-export interface BlogItem {
+export interface ShareItem {
   id: string;
   title: string;
   description: string;

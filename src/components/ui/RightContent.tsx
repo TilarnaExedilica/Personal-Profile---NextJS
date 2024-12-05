@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import TabCollection from './TabCollection';
 import TabTimeline from './TabTimeline';
-import TabBlog from './TabBlog';
-import { collectionConfig, blogConfig, timelineConfig } from '@/config/config';
+import TabShare from './TabShare';
+import { collectionConfig, shareConfig, timelineConfig } from '@/config/config';
 
 export default function RightContent() {
   const [activeTab, setActiveTab] = useState('collection');
@@ -45,17 +45,17 @@ export default function RightContent() {
   const menuItems = [
     { 
       id: 'collection', 
-      label: 'Collection', 
+      label: 'Collections', 
       count: collectionConfig.collections.length 
     },
     { 
-      id: 'blog', 
-      label: 'Blogs', 
-      count: blogConfig.blogs.length 
+      id: 'share', 
+      label: 'Shares', 
+      count: shareConfig.shares.length 
     },
     { 
       id: 'timeline', 
-      label: 'Timeline', 
+      label: 'Timelines', 
       count: timelineConfig.timelines.length 
     },
   ];
@@ -66,8 +66,8 @@ export default function RightContent() {
         return <TabCollection />;
       case 'timeline':
         return <TabTimeline />;
-      case 'blog':
-        return <TabBlog />;
+      case 'share':
+        return <TabShare />;
       default:
         return null;
     }
