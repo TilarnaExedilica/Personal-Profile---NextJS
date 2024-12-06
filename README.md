@@ -41,16 +41,27 @@ src/data/
 │       ├── time        # Event date (YYYY-MM-DD)
 │       └── image_url   # Optional event image
 │
-└── collection.json     # Project showcase data
-    └── collections     # List of projects
+├── collection.json     # Project showcase data
+│   └── collections     # List of projects
+│       ├── id         # Unique identifier
+│       ├── title      # Project name
+│       ├── description # Project description
+│       ├── thumbnail_url # Preview image
+│       ├── post_url   # Project link
+│       ├── posted_date # Publication date
+│       ├── tags       # Technology tags
+│       └── category   # Project category
+│
+└── share.json         # Shared content data
+    └── shares         # List of shared items
         ├── id         # Unique identifier
-        ├── title      # Project name
-        ├── description # Project description
+        ├── title      # Share title
+        ├── description # Share description
         ├── thumbnail_url # Preview image
-        ├── post_url   # Project link
+        ├── post_url   # Share link
         ├── posted_date # Publication date
-        ├── tags       # Technology tags
-        └── category   # Project category
+        ├── tags       # Content tags
+        └── category   # Content category
 ```
 
 ## Quick Start Guide
@@ -141,7 +152,7 @@ src/
 │   └── page.tsx           # Page
 ├── components/            
 │   ├── common/            # Components common
-│   ├── forms/             # Components form
+��   ├── forms/             # Components form
 │   ├── layouts/           # Components layout
 │   └── ui/                # UI components
 ├── config/                # Config    
