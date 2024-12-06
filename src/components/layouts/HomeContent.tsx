@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import backgroundImage from '@/assets/images/background_01.jpg';
 import avatarImage from '@/assets/images/ken.png';
@@ -23,9 +23,10 @@ interface SocialLink {
 export default function HomeContent() {
   const [showRightContent, setShowRightContent] = useState(false);
   const [bannerHeight, setBannerHeight] = useState("145px");
+  const [currentGameIndex, setCurrentGameIndex] = useState(0);
+  const [showGameCode, setShowGameCode] = useState(false);
 
   useEffect(() => {
-    // Set initial banner height after component mounts
     setBannerHeight(window.innerWidth >= 640 ? "200px" : "145px");
 
     const handleResize = () => {
@@ -34,6 +35,16 @@ export default function HomeContent() {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentGameIndex((prevIndex) => 
+        prevIndex === (profileConfig.plays?.length || 1) - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -165,6 +176,53 @@ export default function HomeContent() {
             className="h-[1px] bg-[var(--line-color)] w-[30px] origin-left"
           />
         </div>
+
+        {/* Game Widget */}
+        {profileConfig.plays && profileConfig.plays.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.5 }}
+            className="absolute bottom-0 right-0 w-[260px] h-[80px] overflow-hidden hidden sm:block rounded-tl-lg"
+            onHoverStart={() => setShowGameCode(true)}
+            onHoverEnd={() => setShowGameCode(false)}
+          >
+            <AnimatePresence>
+              <motion.div
+                key={currentGameIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ 
+                  duration: 0.3,
+                }}
+                className="absolute w-full h-full"
+              >
+                <Image
+                  src={profileConfig.plays[currentGameIndex].img_url}
+                  alt={profileConfig.plays[currentGameIndex].game}
+                  fill
+                  className="object-cover"
+                />
+                
+                {/* Game Code Overlay */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: showGameCode ? 1 : 0 }}
+                  className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 text-white"
+                >
+                  <div className="text-sm font-medium">
+                    {profileConfig.plays[currentGameIndex].game}
+                  </div>
+                  <div className="text-xs mt-1">
+                    ID: {profileConfig.plays[currentGameIndex].code}
+                  </div>
+                </motion.div>
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
+        )}
+
       </motion.div>
 
       {/* Avatar section */}

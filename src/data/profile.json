@@ -144,5 +144,19 @@
         "size": 18
       }
     }
+  ],
+  "plays": [
+    {
+      "game": "Valorant",
+      "url": "https://playvalorant.com/",
+      "img_url": "https://static.wikia.nocookie.net/valorant/images/e/e3/VALORANT_Dawn_Card_Wide.png/revision/latest?cb=20230711202642",
+      "code": "800652935"
+    },
+    {
+      "game": "Wuthering Waves",
+      "url": "https://wutheringwaves.kurogames.com/en/",
+      "img_url": "https://wutheringwaves.kurogames.com/static4.0/assets/en-49a9b829.jpg",
+      "code": "800652935"
+    }
   ]
 } 

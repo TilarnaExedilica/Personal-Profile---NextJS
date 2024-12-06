@@ -5,6 +5,7 @@ export interface Profile {
   contactInfo: ContactInfo[];
   socialLinks: SocialLink[];
   jobTags: JobTag[];
+  plays: Play[];
 }
 
 export interface Introduction {
@@ -48,4 +49,11 @@ export interface JobTag {
   icon: Icon;
   colors: Colors;
   borders: Borders;
+}
+
+export interface Play {
+  game: string;
+  url: string;
+  img_url: string;
+  code: string;
 } 
