@@ -42,7 +42,7 @@ export default function HomeContent() {
       setCurrentGameIndex((prevIndex) => 
         prevIndex === (profileConfig.plays?.length || 1) - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
@@ -179,48 +179,71 @@ export default function HomeContent() {
 
         {/* Game Widget */}
         {profileConfig.plays && profileConfig.plays.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.5 }}
-            className="absolute bottom-0 right-0 w-[260px] h-[80px] overflow-hidden hidden sm:block rounded-tl-lg"
-            onHoverStart={() => setShowGameCode(true)}
-            onHoverEnd={() => setShowGameCode(false)}
-          >
-            <AnimatePresence>
+          <div className="absolute -bottom-[2px] right-0 flex items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 2.5 }}
+              className="w-[250px] h-[80px] overflow-hidden hidden sm:block rounded-l-lg relative"
+              onHoverStart={() => setShowGameCode(true)}
+              onHoverEnd={() => setShowGameCode(false)}
+            >
+              <AnimatePresence>
+                <motion.div
+                  key={currentGameIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ 
+                    duration: 0.3,
+                  }}
+                  className="absolute w-full h-full"
+                >
+                  <Image
+                    src={profileConfig.plays[currentGameIndex].img_url}
+                    alt={profileConfig.plays[currentGameIndex].game}
+                    fill
+                    className="object-cover"
+                  />
+                  
+                  {/* Game Code Overlay */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: showGameCode ? 1 : 0 }}
+                    className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 text-white"
+                  >
+                    <div className="text-sm font-medium">
+                      {profileConfig.plays[currentGameIndex].game}
+                    </div>
+                    <div className="text-xs mt-1">
+                      ID: {profileConfig.plays[currentGameIndex].code}
+                    </div>
+                  </motion.div>
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+            
+            {/* Vertical Text with blur background */}
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 2.7 }}
+              className="hidden sm:flex items-center justify-center bg-black/60 backdrop-blur-[8px] px-2 py-2 rounded-tl-lg"
+            >
               <motion.div
-                key={currentGameIndex}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ 
-                  duration: 0.3,
+                transition={{
+                  duration: 0.5,
+                  delay: 2.9
                 }}
-                className="absolute w-full h-full"
+                className="-rotate-180 text-[10px] tracking-wider text-white font-medium"
+                style={{ writingMode: 'vertical-rl' }}
               >
-                <Image
-                  src={profileConfig.plays[currentGameIndex].img_url}
-                  alt={profileConfig.plays[currentGameIndex].game}
-                  fill
-                  className="object-cover"
-                />
-                
-                {/* Game Code Overlay */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: showGameCode ? 1 : 0 }}
-                  className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 text-white"
-                >
-                  <div className="text-sm font-medium">
-                    {profileConfig.plays[currentGameIndex].game}
-                  </div>
-                  <div className="text-xs mt-1">
-                    ID: {profileConfig.plays[currentGameIndex].code}
-                  </div>
-                </motion.div>
+                PLAY WITH ME
               </motion.div>
-            </AnimatePresence>
-          </motion.div>
+            </motion.div>
+          </div>
         )}
 
       </motion.div>
