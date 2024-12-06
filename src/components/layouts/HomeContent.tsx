@@ -2,7 +2,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import backgroundImage from '@/assets/images/background_01.jpg';
-import avatarImage from '@/assets/images/ken.png';
 import LeftContent from '@/components/ui/LeftContent';
 import RightContent from '@/components/ui/RightContent';
 import { FaChevronRight } from 'react-icons/fa';
@@ -264,7 +263,7 @@ export default function HomeContent() {
           
           <div className="relative w-[70px] h-[70px] sm:w-[120px] sm:h-[120px] rounded-full overflow-hidden shadow-lg">
             <Image
-              src={avatarImage}
+              src={profileConfig.avatar_url}
               alt="Avatar"
               fill
               className="object-cover"

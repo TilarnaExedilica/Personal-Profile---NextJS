@@ -25,6 +25,7 @@ src/data/
 ├── profile.json          # Personal information and settings
 │   ├── name             # Your name
 │   ├── codename         # Your username/handle
+│   ├── avatar_url       # URL to your profile picture
 │   ├── jobTags          # Current job status & roles
 │   ├── contactInfo      # Contact information
 │   ├── introduction     # Self-introduction sections
