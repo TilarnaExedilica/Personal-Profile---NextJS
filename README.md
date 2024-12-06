@@ -8,11 +8,11 @@ Check out the live demo: [https://personal-profile-next-js-three.vercel.app/spla
 
 ## Screenshots
 
-### Timeline View
+### Profile View
 
 ![Timeline View](./screenshots/capture1.png)
 
-### Profile View
+### Timeline View
 
 ![Profile View](./screenshots/capture2.png)
 
@@ -102,6 +102,35 @@ git push
   - Click "Deploy"
 
 Your portfolio will be live at: `https://your-username.vercel.app`
+
+### if you don't have much knowledge about programming
+
+1. **Fork the Project**
+   - Visit [https://github.com/TilarnaExedilica/Personal-Profile---NextJS](https://github.com/TilarnaExedilica/Personal-Profile---NextJS)
+   - Click the "Fork" button in the top-right corner
+   - Wait for GitHub to create a copy in your account
+
+2. **Edit Your Personal Information**
+   - In your forked repository, navigate to the `src/data` folder
+   - Click on the file you want to edit (profile.json, timeline.json, or collection.json)
+   - Click the pencil icon (Edit) in the top-right corner GitHub will open the file in the online editor
+   - Update your information following the existing structure
+   - Scroll down, add a commit message, and click "Commit changes"
+
+3. **Deploy on Vercel**
+   - Go to [Vercel.com](https://vercel.com) and sign in with your GitHub account
+   - Click "New Project"
+   - Select your forked repository
+   - Click "Deploy"
+   - Wait a few minutes for Vercel to build and deploy your website
+   - Vercel will provide you with a URL (like `https://your-project.vercel.app`)
+
+4. **Future Updates**
+   - Return to your GitHub repository
+   - Repeat step 2 to modify your information
+   - Vercel will automatically update your website whenever you change the data
+
+Note: Make sure to maintain the JSON structure when editing files. If you encounter errors, check for proper commas and brackets in the JSON files.
 
 ## Structure
 
