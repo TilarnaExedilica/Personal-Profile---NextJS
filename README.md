@@ -152,7 +152,6 @@ src/
 │   └── page.tsx           # Page
 ├── components/            
 │   ├── common/            # Components common
-��   ├── forms/             # Components form
 │   ├── layouts/           # Components layout
 │   └── ui/                # UI components
 ├── config/                # Config    
