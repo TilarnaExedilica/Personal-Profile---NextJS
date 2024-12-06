@@ -2,15 +2,19 @@
 
 A modern and interactive personal portfolio built with Next.js, showcasing a perfect blend of elegant design and smooth animations. This project features a dynamic timeline of professional milestones, a collection showcase, and a comprehensive profile section - all wrapped in a responsive and user-friendly interface.
 
+## Live Preview
+
+Check out the live demo: [https://personal-profile-next-js-three.vercel.app/splash](https://personal-profile-next-js-three.vercel.app)
+
 ## Screenshots
 
 ### Timeline View
 
-![Timeline View](./public/images/capture1.png)
+![Timeline View](./screenshots/capture1.png)
 
 ### Profile View
 
-![Profile View](./public/images/capture2.png)
+![Profile View](./screenshots/capture2.png)
 
 ## Data Configuration
 
