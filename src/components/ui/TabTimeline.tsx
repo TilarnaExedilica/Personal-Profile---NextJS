@@ -43,7 +43,7 @@ export default function TabTimeline() {
               </div>
               
               <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl hover:scale-[1.02] transition-transform border border-gray-800">
-                <div className="flex gap-6">
+                <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-1 space-y-4">
                     <div className="space-y-1">
                       <h3 className="text-lg font-semibold text-[var(--accent-lime)]">
@@ -67,7 +67,7 @@ export default function TabTimeline() {
                   </div>
 
                   {item.image_url && (
-                    <div className="flex-shrink-0 w-[150px] h-[150px] rounded-xl overflow-hidden border border-gray-800">
+                    <div className="w-full md:w-[150px] h-[200px] md:h-[150px] rounded-xl overflow-hidden border border-gray-800 flex-shrink-0">
                       <Image
                         src={item.image_url}
                         alt={item.title}
