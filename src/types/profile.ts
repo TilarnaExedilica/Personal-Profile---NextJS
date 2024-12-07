@@ -2,6 +2,7 @@ export interface Profile {
   name: string;
   codename: string;
   avatar_url: string;
+  banner_url?: string;
   introduction: Introduction[];
   contactInfo: ContactInfo[];
   socialLinks: SocialLink[];

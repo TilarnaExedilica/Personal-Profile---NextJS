@@ -26,6 +26,7 @@ src/data/
 │   ├── name             # Your name
 │   ├── codename         # Your username/handle
 │   ├── avatar_url       # URL to your profile picture
+│   ├── banner_url       # URL to your banner image (optional)
 │   ├── jobTags          # Current job status & roles
 │   ├── contactInfo      # Contact information
 │   ├── introduction     # Self-introduction sections

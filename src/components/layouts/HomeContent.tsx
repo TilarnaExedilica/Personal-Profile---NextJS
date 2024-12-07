@@ -76,7 +76,7 @@ export default function HomeContent() {
           className="relative w-full h-full"
         >
           <Image
-            src={backgroundImage}
+            src={profileConfig.banner_url || backgroundImage}
             alt="Banner background"
             fill
             className="object-cover"
