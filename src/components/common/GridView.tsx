@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import GridViewItem from './GridViewItem';
 import Pagination from './Pagination';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface GridViewProps {
   items: Array<{
@@ -62,29 +63,126 @@ export default function GridView({ items, title }: GridViewProps) {
     );
   }
 
-  return (
-    <div className="min-h-[300px]">
-      <h2 className="text-2xl font-bold mb-4">{title}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {currentItems.map((item) => (
-          <GridViewItem
-            key={item.id}
-            title={item.title}
-            subtitle={item.description}
-            imageUrl={item.thumbnail_url}
-            link={item.post_url}
-            tags={item.tags}
-          />
-        ))}
-      </div>
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2
+      }
+    }
+  };
 
-      {totalPages > 1 && (
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={setCurrentPage}
-        />
-      )}
-    </div>
+  const itemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.9
+    },
+    show: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 12,
+        duration: 0.5
+      }
+    },
+    exit: { 
+      opacity: 0, 
+      y: -30,
+      scale: 0.95,
+      transition: {
+        duration: 0.4,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  return (
+    <motion.div 
+      className="min-h-[300px]"
+      layout
+      transition={{ 
+        duration: 0.6,
+        ease: [0.4, 0, 0.2, 1]
+      }}
+    >
+      <h2 className="text-2xl font-bold mb-4">{title}</h2>
+      
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        variants={container}
+        initial="hidden"
+        animate="show"
+        key={currentPage}
+        layout
+        transition={{ 
+          duration: 0.6,
+          ease: [0.4, 0, 0.2, 1]
+        }}
+      >
+        <AnimatePresence mode="wait">
+          {currentItems.map((item) => (
+            <motion.div
+              key={item.id}
+              variants={itemVariants}
+              initial="hidden"
+              animate="show"
+              exit="exit"
+              layout
+              style={{ 
+                originX: 0.5, 
+                originY: 0.5 
+              }}
+            >
+              <GridViewItem
+                title={item.title}
+                subtitle={item.description}
+                imageUrl={item.thumbnail_url}
+                link={item.post_url}
+                tags={item.tags}
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
+
+      <AnimatePresence mode="wait">
+        {totalPages > 1 && (
+          <motion.div
+            key="pagination"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ 
+              opacity: 1, 
+              y: 0,
+              transition: {
+                duration: 0.5,
+                delay: 0.3,
+                ease: [0.4, 0, 0.2, 1]
+              }
+            }}
+            exit={{ 
+              opacity: 0, 
+              y: 20,
+              transition: {
+                duration: 0.4
+              }
+            }}
+            layout
+            className="mt-8"
+          >
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 } 
